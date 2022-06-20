@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<chapter xml:id="ch-seven" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Challenge Workshop #2</title>
+  <introduction>
+    <p>This chapter is not about seeing new things, but doing new things with topics you've seen before. You will be asked to take on two challenging tasks, both involving setting up an equation based on a problem statement, expanding and simplifying polynomial expressions, and solving polynomial equations.</p>
+  </introduction>
+    
+    <section>
+    <title>Building a Box</title>
+        <introduction><p>In the following example, you might need the fact that the area of a rectangle is <m>A = \ell w</m> where <m>A</m> ia the area, <m>\ell</m> is the length, and <m>w</m> is the width. You might also want to use the fact that the volume of a rectangular prism (or a box) is <m>V = \ell w h</m>, where <m>V</m> is the volume, <m>\ell</m> is the length, <m>w</m> is the width, and <m>h</m> is the height. </p></introduction>
+    
+    <example>
+        <statement><p> Suppose a large rectangular piece of cardboard with length of 24 feet and width of 36 feet can have squares with length and width of <m>x</m> cut out from each corner in order to fold up into the shape of a box (with no lid). Draw and label both a picture of the flat piece of cardboard and a picture of when it is folded up into the shape of a box. Answer each of the following questions: 
+            <ul>
+            <li>What values are allowed for <m>x</m>? Give reasoning in terms of the equation for the volume of the box. (In other words, when is the volume positive)? </li>
+            <li>What values are allowed for <m>x</m>? Give reasoning in terms of the real-world context of this problem.</li>
+            <li>When will the volume of the box be equal to <m>24,920</m> cubic feet?</li>
+            <li>When will the area of the base of the box be equal to <m>160</m> square feet?</li></ul>
+            </p></statement>
+        <hint>When you are thinking through problems like this, you should focus on what's possible. What is possible, mathematically? What is possible in the real world? When things go wrong, is it because you are trying to do something that's not possible?</hint>
+        <answer>The values allowed (overall) for <m>x</m> are in the interval <m>(0,12)</m>. The value of <m>x</m> for a volume of <m>24,920</m> cubic feet is 30 feet, which isn't possible given the real-world context. The area of the base of the box will be equal to <m>160</m> square feet when <m>x</m> is <m>8</m> feet.</answer>
+    </example>
+        </section>
+    
+    <section>
+    <title>An Exploration of Profit</title>
+        <introduction><p>For the following example, you might need the fact that revenue for selling a product is <m>r=su</m> where <m>r</m> is the revenue in dollars, <m>s</m> is the selling price, and <m>u</m> is the number of units sold. You might also need the fact that the profit from selling a product is <m>P=r-c</m> where <m>P</m> is the profit in dollars, <m>r</m> is revenue, and <m>c</m> is cost of creating and selling the product.</p></introduction>
+    <example>
+        <statement><p>The following table represents the number of units sold for an item, given the selling price of the item.
+            <table>
+            <tabular>
+                <row><cell>Selling Price</cell>
+                <cell>1</cell>
+                <cell>5</cell>
+                <cell>10</cell>
+                <cell>50</cell>
+                </row>
+                <row><cell>Units Sold</cell>
+                <cell>1180</cell>
+                <cell>1100</cell>
+                <cell>1000</cell>
+                <cell>200</cell>
+                </row>
+                </tabular>
+            </table>
+            Answer the following questions: 
+            <ul>
+            <li>What is the revenue, given the selling price of the item?</li>
+            <li>Assuming the cost of producing items is <m>c=10u</m>, find the equation for profit, given the selling price of the item.</li>
+            <li>What is the smallest selling price of the item in order to turn a profit?</li>
+            <li>What is the largest selling price of the item before no longer being able to turn a profit?</li>
+            </ul>
+            </p>
+        </statement>
+        <hint>All of your equations should have <m>s</m> as an input.</hint>
+        <answer>The selling price <m>s</m> can be in the interval <m>(10,60)</m> in order to turn a profit.</answer>
+        </example>
+    </section>
+</chapter>

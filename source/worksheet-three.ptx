@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<chapter xml:id="ch-three" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Communication</title>
+  <introduction>
+    <p>Doing mathematics involves solving problems. There is a distinction between solving problems and practicing exercises. An <term>exercise</term> is routine, while a <term>problem</term> is not. Some problems are non-routine in that you might need to use a tool (mathematics concept) in a new way or with other tools you haven't previously thought about combining. These problems might still produce a single correct answer or solution set like exercises. Other problems are both non-routine and not entirely well-stated. These problems may have a number of solutions, depending on whether you take a certain path or another. Here's one example of a problem being non-routine and the mathematician's suggested solutions before finding the correct answer: 
+      <figure xml:id="eighty-miles">
+        <video youtube="m2eyq9qTOQY"/></figure>
+      Here is another example of a problem which is multiple choice in a higher stakes environment.
+      <figure xml:id="millionaire">
+        <video youtube="BbX44YSsQ2I"/></figure></p>
+      
+      <p>No matter whether you are working on an exercise or a problem, communication of what you understand in the solution process is incredibly important. Your understanding isn't directly measurable (or grade-able), but your communication is. </p>
+  </introduction>
+    <section>
+    <title>Interpreting Problem Statements</title>
+        <introduction><p>In <xref ref="eighty-miles"/>, the mathematician in the video was able to solve the problem only after the question was restated. At first, they were asked "If you are going 80 miles per hour, how long does it take you to go 80 miles?" After awhile, they are asked "If you are going 80 miles per hour, so an hour at 80 miles, so how long will it take you to go 80 miles?" This reframing is often an important step to solve problems, but we do not always have another person there to do it for us. Instead, we should practice reframing for ourselves.</p>
+        <example>
+            <statement>Consider the question from <xref ref="millionaire"/>: "Which of these square numbers also happens to be the sum of two smaller square numbers?" The answer choices were <m>16</m>, <m>25</m>, <m>36</m>, and <m>49</m>. How would you reframe the question in order to answer it if you were in this mathematician's shoes? </statement></example></introduction>
+    <exercises>
+        <exercisegroup>
+        <introduction><p>In each of the following problem statements, figure out what you are being asked, what tools you need, and what tools you have. Tools might be considered to be definitions, theorems, equations, formulas, etc.</p></introduction>
+        <exercise>
+            <statement>If <m>f(x) = 11-3x-2x^2</m>, then find the average rate of change between <m>x</m> and <m>x+h</m>, where <m>h</m> is a constant.
+            </statement>
+            </exercise>
+        
+        <exericse>
+            <statement><p>If the average rate of change of <m>f(x) = \dfrac{kx}{5-2x}</m> from <m>x=2</m> to <m>x=5</m> is equal to 2, then find the value of <m>k</m>.</p>
+            </statement>
+            </exericse>
+        
+        <exercise>
+            <statement>
+                <p>According to Ohm's law, the electric current <m>l</m>, in amperes, in a circuit varies directly with its voltage <m>V</m>. When 14 volts are apllied, the current is 2 amperes. What is the current when 29 volts are applied.</p>
+            </statement>
+            </exercise>
+        </exercisegroup></exercises></section>
+    
+    <section>
+    <title>"Show Your Work"</title>
+    <introduction>
+        <p> In <xref ref="millionaire"/>, the mathematician was given a multiple choice question, so did not need to explain their work or show how they determined the correct answer. Let's say that you needed to answer a similar question "Find a perfect square which also happens to be the sum of two smaller perfect squares."</p>
+        <p>We can answer this question by first thinking of some perfect sqaures <m>1^2=1</m>, <m>2^2=4</m>, <m>3^2=9</m>, <m>4^2=16</m>, <m>5^2=25</m>, <m>6^2=36</m>, <m>7^2=49</m>, etc. This means that we can use the numbers 1, 4, 9, 16, 25, 36, 49, etc. in order to make another perfect square <em>OR</em> we can think about those perfect squares and what kind of sums we'd need to make them. </p>
+        <p>Even within these two options, there are numerous mental organizations you can take to finding a solution (note there is not a single correct solution here). This means that because you will likely solve it in a different way than I'm thinking of it, you should show enough of your reasoning to explain why your solution is equivalently correct to someone who took a different route.</p>
+        </introduction>
+    <exercises>
+        <exercisegroup>
+        <introduction>Answer each of the following. Show your work and explanation.</introduction>
+            <exercise><statement>Newton's Law of Gravitation says that two objects with masses <m>m_1</m> and <m>m_2</m> attract each other with a force <m>F</m> that is jointly proportional to their masses and inversly proportional to the square of the distance <m>r</m> between the objects. Newton discovered the constant of variation is <m>6.67×10^{−11}</m>.
+
+                In a small laboratory experiment, two <m>400</m> kg masses are separated by <m>0.8</m> meters. What would the gravitational force between the objects be?</statement>
+            </exercise>
+        
+        <exercise>
+            <statement><p>The velocity <m>V</m> (in centimeters per second) of blood in an artery at a distance <m>x</m> cm from the center of the artery can be modeled by the function <m>V=f(x)=500(0.04−x2)</m> for <m>0\leqx\leq0.2</m>. What is the lowest velocity in centimeters per second the blood might be traveling? What is the highest velocity it might travel?</p></statement></exercise></exercisegroup></exercises>
+    </section>
+</chapter>
