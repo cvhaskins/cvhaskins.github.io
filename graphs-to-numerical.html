@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-06-20T13:40:14Z       *-->
+<!--*       on 2022-06-28T15:38:34Z       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -49,7 +49,38 @@
 <link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/colors_blue_red.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
-<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+<!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX Course: Title Here';
+eBookConfig.basecourse = 'PTX Base Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.acDefaultLanguage = 'python';
+eBookConfig.runestone_version = '5.0.1';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.2.1/runtime.b0f8547c48f16a9f.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.2.1/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.2.1/runestone.0e9550fe42760516.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.2.1/637.fafafbd97df8a0d1.css">
+<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.2.1/runestone.e4d5592da655219f.css">
 </head>
 <body class="pretext-book ignore-math has-toc has-sidebar-left">
 <a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
@@ -59,6 +90,8 @@
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
 <a id="logo-link" href=""></a><div class="title-container">
@@ -160,7 +193,7 @@
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="graphs-to-numerical"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">2.2</span> <span class="title">Converting Between Graphical and Numerical Information</span>
 </h2>
-<section class="introduction" id="introduction-17"><p id="p-114">In addition to verbal and algebraic information, you may need to take in or produce graphic or numerical representations of mathematical information. For example, consider the coordinate plane below with three labeled points. <div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/time-one-time-two-time-three.svg" role="img" class="contained" alt="A coordinate plane with three labeled points. The point labeled Time 1 is 1 unit to the right of the vertical axis and 3 units up from the horizontal axis. The point labeled Time 2 is 2 units to the right of the vertical axis and 5 units up from the horizontal axis. The point labeled Time 3 is 3 units to the right and about 7.25 units up."></div> You are asked to describe this graphical information in numerical form. Typically, this means that you will create a table to summarize the information. Because this graph is three discrete (or separate) points, this summary will be easier to create than if the graph were a full curve. We can either represent the table vertically: <figure class="table table-like" id="table-1"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.2.1<span class="period">.</span></span><span class="space"> </span></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<section class="introduction" id="introduction-17"><p id="p-117">In addition to verbal and algebraic information, you may need to take in or produce graphic or numerical representations of mathematical information. For example, consider the coordinate plane below with three labeled points. <div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/time-one-time-two-time-three.svg" role="img" class="contained" alt="A coordinate plane with three labeled points. The point labeled Time 1 is 1 unit to the right of the vertical axis and 3 units up from the horizontal axis. The point labeled Time 2 is 2 units to the right of the vertical axis and 5 units up from the horizontal axis. The point labeled Time 3 is 3 units to the right and about 7.25 units up."></div> You are asked to describe this graphical information in numerical form. Typically, this means that you will create a table to summarize the information. Because this graph is three discrete (or separate) points, this summary will be easier to create than if the graph were a full curve. We can either represent the table vertically: <figure class="table table-like" id="table-1"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.2.1<span class="period">.</span></span><span class="space"> </span></figcaption><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(x\)</span></td>
 <td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(y \)</span></td>
@@ -191,7 +224,7 @@
 </h3>
 <div class="exercisegroup" id="exercisegroup-9">
 <h4 class="heading"><span class="title">Exercise Group.</span></h4>
-<div class="introduction" id="introduction-18"><p id="p-115">Graph each of the following numeric representations.</p></div>
+<div class="introduction" id="introduction-18"><p id="p-118">Graph each of the following numeric representations.</p></div>
 <div class="exercisegroup-exercises">
 <article class="exercise exercise-like" id="exercise-34"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
 <figure class="table table-like" id="table-3"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.2.3<span class="period">.</span></span><span class="space"> </span></figcaption><div class="tabular-box natural-width"><table class="tabular">
@@ -200,24 +233,24 @@
 <td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(-3\)</span></td>
 <td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(-2\)</span></td>
 <td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(0\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\phantom{+}0\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\phantom{+}1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\phantom{+}2\)</span></td>
 </tr>
 <tr>
 <td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(g(\alpha)\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(9\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(4\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(0\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(4\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\phantom{+}9\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\phantom{+}4\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\phantom{+}1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\phantom{+}0\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\phantom{+}1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\phantom{+}4\)</span></td>
 </tr>
 </table></div></figure></article><article class="exercise exercise-like" id="exercise-35"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
 <figure class="table table-like" id="table-4"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.2.4<span class="period">.</span></span><span class="space"> </span></figcaption><div class="tabular-box natural-width"><table class="tabular">
 <tr>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(A\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(B\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\phantom{+}A\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\phantom{+}B\)</span></td>
 </tr>
 <tr>
 <td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(-2\)</span></td>
@@ -236,20 +269,20 @@
 <td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(-3\)</span></td>
 </tr>
 <tr>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\dfrac{1}{3}\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(3\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\phantom{+}\dfrac{1}{3}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\phantom{+}3\)</span></td>
 </tr>
 <tr>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\dfrac{1}{2}\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\phantom{+}\dfrac{1}{2}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\phantom{+}2\)</span></td>
 </tr>
 <tr>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\phantom{+}1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\phantom{+}1\)</span></td>
 </tr>
 <tr>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(2\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\dfrac{1}{2}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\phantom{+}2\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\phantom{+}\dfrac{1}{2}\)</span></td>
 </tr>
 </table></div></figure></article>
 </div>

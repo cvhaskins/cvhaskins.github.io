@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-06-20T13:40:13Z       *-->
+<!--*       on 2022-06-28T15:38:34Z       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -49,7 +49,38 @@
 <link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/colors_blue_red.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
-<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+<!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX Course: Title Here';
+eBookConfig.basecourse = 'PTX Base Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.acDefaultLanguage = 'python';
+eBookConfig.runestone_version = '5.0.1';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.2.1/runtime.b0f8547c48f16a9f.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.2.1/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.2.1/runestone.0e9550fe42760516.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.2.1/637.fafafbd97df8a0d1.css">
+<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.2.1/runestone.e4d5592da655219f.css">
 </head>
 <body class="pretext-book ignore-math has-toc has-sidebar-left">
 <a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
@@ -59,6 +90,8 @@
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
 <a id="logo-link" href=""></a><div class="title-container">
@@ -160,7 +193,7 @@
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="solve-lin-eq"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">1.3</span> <span class="title">Solving Linear Equations</span>
 </h2>
-<section class="introduction" id="introduction-7"><p id="p-45">A <dfn class="terminology">linear equation</dfn> is an equation which sets two linear expressions equal to each other. The linear equation may have a single variable, like</p>
+<section class="introduction" id="introduction-7"><p id="p-48">A <dfn class="terminology">linear equation</dfn> is an equation which sets two linear expressions equal to each other. The linear equation may have a single variable, like</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 3(x-5)+2x = \dfrac{1}{2}x - 5
@@ -178,12 +211,12 @@ y=5x+6
 2x = 3y-7x + 5
 \end{equation*}
 </div>
-<p id="p-46">Solving linear equations might include expanding or condensing the expressions on either side, but will also include what is often referred to as ``algebraic manipulations'', or performaning a certain operation on both sides of the equation simultaneously. This means each subsequent step of the solution is equivalent to the last.</p>
+<p id="p-49">Solving linear equations might include expanding or condensing the expressions on either side, but will also include what is often referred to as "algebraic manipulations", or performaning a certain operation on both sides of the equation simultaneously. This means each subsequent step of the solution is equivalent to the last.</p>
 <article class="example example-like" id="solve-linear-equation"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-solve-linear-equation"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.3.1</span><span class="period">.</span><span class="space"> </span><span class="title"><p id="p-47">Solving a Linear Equation</p>.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-solve-linear-equation"><article class="example example-like"><p id="p-48">Solve <span class="process-math">\(3(x-5)+2x = \dfrac{1}{2}x - 5\)</span> for the variable <span class="process-math">\(x\)</span></p>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.3.1</span><span class="period">.</span><span class="space"> </span><span class="title"><p id="p-50">Solving a Linear Equation</p>.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-solve-linear-equation"><article class="example example-like"><p id="p-51">Solve <span class="process-math">\(3(x-5)+2x = \dfrac{1}{2}x - 5\)</span> for the variable <span class="process-math">\(x\)</span></p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-13" id="answer-13"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-13"><div class="answer solution-like"><span class="process-math">\(x=\dfrac{20}{9}\)</span></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-14" id="answer-14"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-14"><div class="answer solution-like"><span class="process-math">\(x=\dfrac{20}{9}\)</span></div></div>
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-3" id="solution-3"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-3"><div class="solution solution-like"><div class="displaymath process-math" data-contains-math-knowls="" id="md-5">
 \begin{gather*}
 3(x-5)+2x = \dfrac{1}{2}x - 5\\
@@ -197,8 +230,8 @@ x=\dfrac{20}{9}
 </div></div></div>
 </div></article></div>
 <article class="example example-like" id="analyze-solve-linear"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-analyze-solve-linear"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.3.2</span><span class="period">.</span><span class="space"> </span><span class="title"><p id="p-50">Analyzing Example 1.3.1</p>.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-analyze-solve-linear"><article class="example example-like"><p id="p-51">Describe the steps for solving the equation in the previous example.</p>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.3.2</span><span class="period">.</span><span class="space"> </span><span class="title"><p id="p-53">Analyzing Example 1.3.1</p>.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-analyze-solve-linear"><article class="example example-like"><p id="p-54">Describe the steps for solving the equation in the previous example.</p>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-4" id="solution-4"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-4"><div class="solution solution-like"><ul class="disc">
 <li id="li-13"><p id="p-derived-li-13">In the left-hand expression, multiply 3 and <span class="process-math">\(x-5\)</span> by distribution.</p></li>
@@ -210,38 +243,38 @@ x=\dfrac{20}{9}
 </ul></div></div>
 </div></article></div>
 <article class="investigation project-like" id="investigation-2"><h3 class="heading">
-<span class="type">Puzzle</span><span class="space"> </span><span class="codenumber">1.3.1</span><span class="period">.</span><span class="space"> </span><span class="title"><p id="p-52">Critiquing and Evaluating Example 1.3.2</p>.</span>
+<span class="type">Puzzle</span><span class="space"> </span><span class="codenumber">1.3.1</span><span class="period">.</span><span class="space"> </span><span class="title"><p id="p-55">Critiquing and Evaluating Example 1.3.2</p>.</span>
 </h3>
-<p id="p-53">Note that the previous examples used a reasonable order of operations and manipulations to solve for <span class="process-math">\(x\text{.}\)</span> Did you use the same order of operations and manipulations when you attempted the problem? Was the order you used reasonable as well? Why or why not?</p>
+<p id="p-56">Note that the previous examples used a reasonable order of operations and manipulations to solve for <span class="process-math">\(x\text{.}\)</span> Did you use the same order of operations and manipulations when you attempted the problem? Was the order you used reasonable as well? Why or why not?</p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-14" id="answer-14"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-14"><div class="answer solution-like"><p id="p-54">There are many reasonable orders of operations and manipulations you can use. The typical order of operations is the same as before, while the typical order of manipulations might go in the opposite order. Consider why we might deviate from this order on occasion, for example in the previous examples, it would have been reasonable to never distribute the 3 to <span class="process-math">\(x-5\text{,}\)</span> and never multiply both sides by 2. Why is that reasonable? What might you do instead?</p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-15" id="answer-15"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-15"><div class="answer solution-like"><p id="p-57">There are many reasonable orders of operations and manipulations you can use. The typical order of operations is the same as before, while the typical order of manipulations might go in the opposite order. Consider why we might deviate from this order on occasion, for example in the previous examples, it would have been reasonable to never distribute the 3 to <span class="process-math">\(x-5\text{,}\)</span> and never multiply both sides by 2. Why is that reasonable? What might you do instead?</p></div></div>
 </div></article></section><section class="exercises" id="exercises-4"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
 </h3>
 <div class="exercisegroup" id="exercisegroup-4">
 <h4 class="heading"><span class="title">Exercise Group.</span></h4>
-<div class="introduction" id="introduction-8"><p id="p-55">Solve the following linear equations for the variable <span class="process-math">\(b\text{,}\)</span> describing each step in words. The answers are provided.</p></div>
+<div class="introduction" id="introduction-8"><p id="p-58">Solve the following linear equations for the variable <span class="process-math">\(b\text{,}\)</span> describing each step in words. The answers are provided.</p></div>
 <div class="exercisegroup-exercises">
 <article class="exercise exercise-like" id="exercise-11"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
-<p id="p-56"><span class="process-math">\(-6b-4=20\)</span></p>
+<p id="p-59"><span class="process-math">\(-6b-4=20\)</span></p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-15" id="answer-15"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-15"><div class="answer solution-like"><p id="p-57"><span class="process-math">\(b=-4\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-16" id="answer-16"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-16"><div class="answer solution-like"><p id="p-60"><span class="process-math">\(b=-4\)</span></p></div></div>
 </div></article><article class="exercise exercise-like" id="exercise-12"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
-<p id="p-58"><span class="process-math">\(2.3=4.5b+30.2\)</span></p>
+<p id="p-61"><span class="process-math">\(2.3=4.5b+30.2\)</span></p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-16" id="answer-16"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-16"><div class="answer solution-like"><p id="p-59"><span class="process-math">\(b=-6.2\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-17" id="answer-17"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-17"><div class="answer solution-like"><p id="p-62"><span class="process-math">\(b=-6.2\)</span></p></div></div>
 </div></article><article class="exercise exercise-like" id="exercise-13"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
-<p id="p-60"><span class="process-math">\(-3(b-4)+5=10-(b+1)\)</span></p>
+<p id="p-63"><span class="process-math">\(-3(b-4)+5=10-(b+1)\)</span></p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-17" id="answer-17"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-17"><div class="answer solution-like"><p id="p-61"><span class="process-math">\(b=4\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-18" id="answer-18"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-18"><div class="answer solution-like"><p id="p-64"><span class="process-math">\(b=4\)</span></p></div></div>
 </div></article><article class="exercise exercise-like" id="exercise-14"><h5 class="heading"><span class="codenumber">4<span class="period">.</span></span></h5>
-<p id="p-62"><span class="process-math">\(\dfrac{b-1}{4}=\dfrac{2b+1}{5}\)</span></p>
+<p id="p-65"><span class="process-math">\(\dfrac{b-1}{4}=\dfrac{2b+1}{5}\)</span></p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-18" id="answer-18"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-18"><div class="answer solution-like"><p id="p-63"><span class="process-math">\(b=-3\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-19" id="answer-19"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-19"><div class="answer solution-like"><p id="p-66"><span class="process-math">\(b=-3\)</span></p></div></div>
 </div></article><article class="exercise exercise-like" id="exercise-15"><h5 class="heading"><span class="codenumber">5<span class="period">.</span></span></h5>
-<p id="p-64"><span class="process-math">\(\dfrac{b-6}{3}=\dfrac{b+3}{2}+1\)</span></p>
+<p id="p-67"><span class="process-math">\(\dfrac{b-6}{3}=\dfrac{b+3}{2}+1\)</span></p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-19" id="answer-19"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-19"><div class="answer solution-like"><p id="p-65"><span class="process-math">\(b=-27\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-20" id="answer-20"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-20"><div class="answer solution-like"><p id="p-68"><span class="process-math">\(b=-27\)</span></p></div></div>
 </div></article>
 </div>
 </div>
@@ -249,15 +282,15 @@ x=\dfrac{20}{9}
 <h4 class="heading"><span class="title">Exercise Group.</span></h4>
 <div class="exercisegroup-exercises">
 <article class="exercise exercise-like" id="exercise-16"><h5 class="heading"><span class="codenumber">6<span class="period">.</span></span></h5>
-<p id="p-67">If my dog consumes 15 pounds of food per week, how many pounds of food will she consumer over the next year?</p>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-20" id="answer-20"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-20"><div class="answer solution-like">780 pounds of food</div></div></article><article class="exercise exercise-like" id="exercise-17"><h5 class="heading"><span class="codenumber">7<span class="period">.</span></span></h5>
-<p id="p-68">A number is four more than twice another number. If one of the numbers is 6, what could the other number be? There are two answers.</p>
+<p id="p-70">If my dog consumes 15 pounds of food per week, how many pounds of food will she consumer over the next year?</p>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-21" id="answer-21"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-21"><div class="answer solution-like">780 pounds of food</div></div></article><article class="exercise exercise-like" id="exercise-17"><h5 class="heading"><span class="codenumber">7<span class="period">.</span></span></h5>
+<p id="p-71">A number is four more than twice another number. If one of the numbers is 6, what could the other number be? There are two answers.</p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-21" id="answer-21"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-21"><div class="answer solution-like">The other number could be either 1 or 16.</div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-22" id="answer-22"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-22"><div class="answer solution-like">The other number could be either 1 or 16.</div></div>
 </div></article><article class="exercise exercise-like" id="exercise-18"><h5 class="heading"><span class="codenumber">8<span class="period">.</span></span></h5>
-<p id="p-69">You are selling t-shirts at a music festival, and start the festival with 470 t-shirts. You sell about 23 per hour during festival hours. How many hours must the festival run in order for you to sell out of shirts?</p>
+<p id="p-72">You are selling t-shirts at a music festival, and start the festival with 470 t-shirts. You sell about 23 per hour during festival hours. How many hours must the festival run in order for you to sell out of shirts?</p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-22" id="answer-22"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-22"><div class="answer solution-like"><p id="p-70">The festival needs to run at least 21 hours to sell out of the 470 available t-shirts.</p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-23" id="answer-23"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-23"><div class="answer solution-like"><p id="p-73">The festival needs to run at least 21 hours to sell out of the 470 available t-shirts.</p></div></div>
 </div></article>
 </div>
 </div></section></section></div></main>

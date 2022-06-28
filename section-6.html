@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-06-20T13:40:14Z       *-->
+<!--*       on 2022-06-28T15:38:34Z       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -49,7 +49,38 @@
 <link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/colors_blue_red.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
-<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+<!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX Course: Title Here';
+eBookConfig.basecourse = 'PTX Base Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.acDefaultLanguage = 'python';
+eBookConfig.runestone_version = '5.0.1';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.2.1/runtime.b0f8547c48f16a9f.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.2.1/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.2.1/runestone.0e9550fe42760516.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.2.1/637.fafafbd97df8a0d1.css">
+<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.2.1/runestone.e4d5592da655219f.css">
 </head>
 <body class="pretext-book ignore-math has-toc has-sidebar-left">
 <a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
@@ -59,6 +90,8 @@
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
 <a id="logo-link" href=""></a><div class="title-container">
@@ -160,7 +193,7 @@
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="section-6"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">3.1</span> <span class="title">Interpreting Problem Statements</span>
 </h2>
-<section class="introduction" id="introduction-20"><p id="p-118">In <a href="" class="xref" data-knowl="./knowl/eighty-miles.html" title="Figure 3.0.1">Figure 3.0.1</a>, the mathematician in the video was able to solve the problem only after the question was restated. At first, they were asked "If you are going 80 miles per hour, how long does it take you to go 80 miles?" After awhile, they are asked "If you are going 80 miles per hour, so an hour at 80 miles, so how long will it take you to go 80 miles?" This reframing is often an important step to solve problems, but we do not always have another person there to do it for us. Instead, we should practice reframing for ourselves.</p>
+<section class="introduction" id="introduction-20"><p id="p-121">In <a href="" class="xref" data-knowl="./knowl/eighty-miles.html" title="Figure 3.0.1">Figure 3.0.1</a>, the mathematician in the video was able to solve the problem only after the question was restated. At first, they were asked "If you are going 80 miles per hour, how long does it take you to go 80 miles?" After awhile, they are asked "If you are going 80 miles per hour, so an hour at 80 miles, so how long will it take you to go 80 miles?" This reframing is often an important step to solve problems, but we do not always have another person there to do it for us. Instead, we should practice reframing for ourselves.</p>
 <article class="example example-like" id="example-11"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-11"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">3.1.1</span><span class="period">.</span>
 </h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-11"><article class="example example-like">Consider the question from <a href="" class="xref" data-knowl="./knowl/millionaire.html" title="Figure 3.0.2">Figure 3.0.2</a>: "Which of these square numbers also happens to be the sum of two smaller square numbers?" The answer choices were <span class="process-math">\(16\text{,}\)</span> <span class="process-math">\(25\text{,}\)</span> <span class="process-math">\(36\text{,}\)</span> and <span class="process-math">\(49\text{.}\)</span> How would you reframe the question in order to answer it if you were in this mathematician's shoes?</article></div></section><section class="exercises" id="exercises-9"><h3 class="heading hide-type">
@@ -168,10 +201,10 @@
 </h3>
 <div class="exercisegroup" id="exercisegroup-10">
 <h4 class="heading"><span class="title">Exercise Group.</span></h4>
-<div class="introduction" id="introduction-21"><p id="p-119">In each of the following problem statements, figure out what you are being asked, what tools you need, and what tools you have. Tools might be considered to be definitions, theorems, equations, formulas, etc.</p></div>
+<div class="introduction" id="introduction-21"><p id="p-122">In each of the following problem statements, figure out what you are being asked, what tools you need, and what tools you have. Tools might be considered to be definitions, theorems, equations, formulas, etc.</p></div>
 <div class="exercisegroup-exercises">
 <article class="exercise exercise-like" id="exercise-36"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>If <span class="process-math">\(f(x) = 11-3x-2x^2\text{,}\)</span> then find the average rate of change between <span class="process-math">\(x\)</span> and <span class="process-math">\(x+h\text{,}\)</span> where <span class="process-math">\(h\)</span> is a constant.</article><article class="exercise exercise-like" id="exercise-37"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
-<p id="p-121">According to Ohm's law, the electric current <span class="process-math">\(l\text{,}\)</span> in amperes, in a circuit varies directly with its voltage <span class="process-math">\(V\text{.}\)</span> When 14 volts are apllied, the current is 2 amperes. What is the current when 29 volts are applied.</p></article>
+<p id="p-124">According to Ohm's law, the electric current <span class="process-math">\(l\text{,}\)</span> in amperes, in a circuit varies directly with its voltage <span class="process-math">\(V\text{.}\)</span> When 14 volts are apllied, the current is 2 amperes. What is the current when 29 volts are applied.</p></article>
 </div>
 </div></section></section></div></main>
 </div>

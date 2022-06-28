@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-06-20T13:40:14Z       *-->
+<!--*       on 2022-06-28T15:38:34Z       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -49,7 +49,38 @@
 <link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/colors_blue_red.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
-<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+<!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX Course: Title Here';
+eBookConfig.basecourse = 'PTX Base Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.acDefaultLanguage = 'python';
+eBookConfig.runestone_version = '5.0.1';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.2.1/runtime.b0f8547c48f16a9f.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.2.1/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.2.1/runestone.0e9550fe42760516.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.2.1/637.fafafbd97df8a0d1.css">
+<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.2.1/runestone.e4d5592da655219f.css">
 </head>
 <body class="pretext-book ignore-math has-toc has-sidebar-left">
 <a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
@@ -59,6 +90,8 @@
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
 <a id="logo-link" href=""></a><div class="title-container">
@@ -160,7 +193,7 @@
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="factoring-methods"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">2.1</span> <span class="title">Methods of Factoring</span>
 </h2>
-<section class="introduction" id="introduction-10"><p id="p-72">A <dfn class="terminology">polynomial expression</dfn> is an expression with at least one term, exponents on variables that are non-negative integers (like counting numbers), and coefficients that are any real number. The following are examples of polynomial expressions with variables represented by symbols:</p>
+<section class="introduction" id="introduction-10"><p id="p-75">A <dfn class="terminology">polynomial expression</dfn> is an expression with at least one term, exponents on variables that are non-negative integers (like counting numbers), and coefficients that are any real number. The following are examples of polynomial expressions with variables represented by symbols:</p>
 <ul class="disc">
 <li id="li-24"><p id="p-derived-li-24"><span class="process-math">\(\displaystyle k-5\)</span></p></li>
 <li id="li-25"><p id="p-derived-li-25"><span class="process-math">\(\displaystyle m^2 - 5m + 6\)</span></p></li>
@@ -169,7 +202,7 @@
 </ul></section><section class="subsection" id="GCF"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">2.1.1</span> <span class="title">Factoring the GCF</span>
 </h3>
-<section class="introduction" id="introduction-11"><p id="p-73">The <dfn class="terminology">Greatest Common Factor</dfn> is the largest factor which can be ``factored out'' of each term. A <dfn class="terminology">factor</dfn> is something which can multiply with other factors to create the term. For example:</p>
+<section class="introduction" id="introduction-11"><p id="p-76">The <dfn class="terminology">Greatest Common Factor</dfn> is the largest factor which can be "factored out" of each term. A <dfn class="terminology">factor</dfn> is something which can multiply with other factors to create the term. For example:</p>
 <ul class="disc">
 <li id="li-28"><p id="p-derived-li-28">3 has factors: -1, 1, -3, 3</p></li>
 <li id="li-29"><p id="p-derived-li-29">4 has factors: -1, 1, -2, 2, -4, 4</p></li>
@@ -177,43 +210,43 @@
 <li id="li-31"><p id="p-derived-li-31"><span class="process-math">\(9\heartsuit^2\)</span> has factors: -1, 1, -3, 3, -9, 9, <span class="process-math">\(-\heartsuit\text{,}\)</span> <span class="process-math">\(\heartsuit\text{,}\)</span> <span class="process-math">\(-3\heartsuit\text{,}\)</span> <span class="process-math">\(3\heartsuit\text{,}\)</span> <span class="process-math">\(-9\heartsuit\text{,}\)</span> <span class="process-math">\(9\heartsuit\text{,}\)</span> <span class="process-math">\(-\heartsuit^2\text{,}\)</span> <span class="process-math">\(\heartsuit^2\text{,}\)</span> <span class="process-math">\(-3\heartsuit^2\text{,}\)</span> <span class="process-math">\(3\heartsuit^2\text{,}\)</span> <span class="process-math">\(-9\heartsuit^2\text{,}\)</span> <span class="process-math">\(9\heartsuit^2\)</span></p></li>
 </ul></section><article class="example example-like" id="GCF-example"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-GCF-example"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.1.1</span><span class="period">.</span><span class="space"> </span><span class="title">How to Factor the GCF.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-GCF-example"><article class="example example-like"><p id="p-74">In a polynomial expression like <span class="process-math">\(-7\heartsuit+7\heartsuit^6-9\heartsuit^2\text{,}\)</span> factoring out the GCF means knowing the factors of each term <em class="emphasis">and</em> what the greatest combination of factors from each term could be. Find the GCF and factor it out.</p>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-GCF-example"><article class="example example-like"><p id="p-77">In a polynomial expression like <span class="process-math">\(-7\heartsuit+7\heartsuit^6-9\heartsuit^2\text{,}\)</span> factoring out the GCF means knowing the factors of each term <em class="emphasis">and</em> what the greatest combination of factors from each term could be. Find the GCF and factor it out.</p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-2" id="hint-2"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-2"><div class="hint solution-like">Factoring the GCF is like dividing it from each term, but it doesn't ``go away'' like it might in a division problem. Factoring is the opposite of distribution.</div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-23" id="answer-23"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-23"><div class="answer solution-like"><p id="p-75">&gt;GCF is <span class="process-math">\(\heartsuit\)</span> or <span class="process-math">\(-\heartsuit\text{,}\)</span> so the factored version of the expression could then be <span class="process-math">\(\heartsuit(-7+7\heartsuit^5-9\heartsuit)\)</span> or <span class="process-math">\(-\heartsuit(7-7\heartsuit^5+9\heartsuit)\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-2" id="hint-2"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-2"><div class="hint solution-like">Factoring the GCF is like dividing it from each term, but it doesn't "go away" like it might in a division problem. Factoring is the opposite of distribution.</div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-24" id="answer-24"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-24"><div class="answer solution-like"><p id="p-78">GCF is <span class="process-math">\(\heartsuit\)</span> or <span class="process-math">\(-\heartsuit\text{,}\)</span> so the factored version of the expression could then be <span class="process-math">\(\heartsuit(-7+7\heartsuit^5-9\heartsuit)\)</span> or <span class="process-math">\(-\heartsuit(7-7\heartsuit^5+9\heartsuit)\)</span></p></div></div>
 </div></article></div>
 <section class="exercises" id="exercises-5"><h4 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
 </h4>
 <div class="exercisegroup" id="exercisegroup-6">
 <h5 class="heading"><span class="title">Exercise Group.</span></h5>
-<div class="introduction" id="introduction-12"><p id="p-76">Factor the GCF from each of the following polynomial expressions</p></div>
+<div class="introduction" id="introduction-12"><p id="p-79">Factor the GCF from each of the following polynomial expressions</p></div>
 <div class="exercisegroup-exercises">
 <article class="exercise exercise-like" id="exercise-19"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
-<p id="p-77"><span class="process-math">\(30x^3-45x^2 + 135x\)</span></p>
+<p id="p-80"><span class="process-math">\(30x^3-45x^2 + 135x\)</span></p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-24" id="answer-24"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-24"><div class="answer solution-like"><p id="p-78"><span class="process-math">\(15x(2x^2-15x+9)\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-25" id="answer-25"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-25"><div class="answer solution-like"><p id="p-81"><span class="process-math">\(15x(2x^2-15x+9)\)</span></p></div></div>
 </div></article><article class="exercise exercise-like" id="exercise-20"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
-<p id="p-79"><span class="process-math">\(200p^3m^3 - 30p^2m^3 + 40m^3\)</span></p>
+<p id="p-82"><span class="process-math">\(200p^3m^3 - 30p^2m^3 + 40m^3\)</span></p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-25" id="answer-25"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-25"><div class="answer solution-like"><p id="p-80"><span class="process-math">\(10m^3(20p^3-3p^2+4)\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-26" id="answer-26"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-26"><div class="answer solution-like"><p id="p-83"><span class="process-math">\(10m^3(20p^3-3p^2+4)\)</span></p></div></div>
 </div></article><article class="exercise exercise-like" id="exercise-21"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
-<p id="p-81"><span class="process-math">\(36j^4k^2 - 18j^3k^3 + 54j^2k^4\)</span></p>
+<p id="p-84"><span class="process-math">\(36j^4k^2 - 18j^3k^3 + 54j^2k^4\)</span></p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-26" id="answer-26"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-26"><div class="answer solution-like"><p id="p-82"><span class="process-math">\(18j^2k^2(2j^2-jk+3k^2)\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-27" id="answer-27"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-27"><div class="answer solution-like"><p id="p-85"><span class="process-math">\(18j^2k^2(2j^2-jk+3k^2)\)</span></p></div></div>
 </div></article><article class="exercise exercise-like" id="exercise-22"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
-<p id="p-83"><span class="process-math">\(3x(x+2) + 4(x+2)\)</span></p>
+<p id="p-86"><span class="process-math">\(3x(x+2) + 4(x+2)\)</span></p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-27" id="answer-27"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-27"><div class="answer solution-like"><p id="p-84"><span class="process-math">\((x+2)(3x+4)\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-28" id="answer-28"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-28"><div class="answer solution-like"><p id="p-87"><span class="process-math">\((x+2)(3x+4)\)</span></p></div></div>
 </div></article>
 </div>
 </div></section></section><section class="subsection" id="grouping"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">2.1.2</span> <span class="title">Factoring by Grouping</span>
 </h3>
-<section class="introduction" id="introduction-13"><p id="p-85">Factoring by grouping is a way to factor out "groups of terms" at a time, instead of a single factor. This method of factoring utilizes the GCF.</p>
+<section class="introduction" id="introduction-13"><p id="p-88">Factoring by grouping is a way to factor out "groups of terms" at a time, instead of a single factor. This method of factoring utilizes the GCF.</p>
 <article class="example example-like" id="example-9"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-9"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.1.2</span><span class="period">.</span><span class="space"> </span><span class="title">An Example of Grouping.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-9"><article class="example example-like">For example, we want to factor the polynomial expression <span class="process-math">\(8r^3 - 64r^2 + r - 8\text{,}\)</span> we can see that it does not have a GCF besides <span class="process-math">\(1\)</span> or <span class="process-math">\(-1\text{.}\)</span> We might be able to factor by grouping. <ol class="decimal">
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-9"><article class="example example-like">For example, we want to factor the polynomial expression <span class="process-math">\(8r^3 - 64r^2 + r - 8\text{,}\)</span> we can see that it does not have a GCF besides <span class="process-math">\(1\)</span> or <span class="process-math">\(-1\text{.}\)</span> We might be able to factor by grouping. <ol class="lower-alpha">
 <li id="li-32"><p id="p-derived-li-32">We'll start with "grouping" the terms. Rewrite the expression, but with some indication that <span class="process-math">\(8r^3\)</span> and <span class="process-math">\(-64r^2\)</span> are in the same group and that <span class="process-math">\(r\)</span> and <span class="process-math">\(-8\)</span> are in the same group.</p></li>
 <li id="li-33"><p id="p-derived-li-33">Factor the GCF out of the first group, then factor the GCF out of the second group.</p></li>
 <li id="li-34"><p id="p-derived-li-34">If we have chosen our groups well <em class="emphasis">and</em> our polynomial expression is factorable, the two terms (our factored groups) will have the same multiplier. What is it?</p></li>
@@ -223,75 +256,75 @@
 </h4>
 <div class="exercisegroup" id="exercisegroup-7">
 <h5 class="heading"><span class="title">Exercise Group.</span></h5>
-<div class="introduction" id="introduction-14"><p id="p-86">Factor each of the following polynomial expressions, if possible.</p></div>
+<div class="introduction" id="introduction-14"><p id="p-89">Factor each of the following polynomial expressions, if possible.</p></div>
 <div class="exercisegroup-exercises">
 <article class="exercise exercise-like" id="exercise-23"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
-<p id="p-87"><span class="process-math">\(12x^3 + 3x^2 - 20x - 15\)</span></p>
+<p id="p-90"><span class="process-math">\(12x^3 + 9x^2 - 20x - 15\)</span></p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-28" id="answer-28"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-28"><div class="answer solution-like"><p id="p-88"><span class="process-math">\((3x^2-5)(4x+3)\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-29" id="answer-29"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-29"><div class="answer solution-like"><p id="p-91"><span class="process-math">\((3x^2-5)(4x+3)\)</span></p></div></div>
 </div></article><article class="exercise exercise-like" id="exercise-24"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
-<p id="p-89"><span class="process-math">\(9mz-4nc+3mc-12nz\)</span></p>
+<p id="p-92"><span class="process-math">\(9mz-4nc+3mc-12nz\)</span></p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-3" id="hint-3"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-3"><div class="hint solution-like"><p id="p-90">Try rearranging the terms before setting your groups.</p></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-29" id="answer-29"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-29"><div class="answer solution-like"><p id="p-91"><span class="process-math">\((3m-4n)(3z+c)\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-3" id="hint-3"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-3"><div class="hint solution-like"><p id="p-93">Try rearranging the terms before setting your groups.</p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-30" id="answer-30"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-30"><div class="answer solution-like"><p id="p-94"><span class="process-math">\((3m-4n)(3z+c)\)</span></p></div></div>
 </div></article><article class="exercise exercise-like" id="exercise-25"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
-<p id="p-92"><span class="process-math">\(8m^2 - 12m + 6m -9\)</span></p>
+<p id="p-95"><span class="process-math">\(8m^2 - 12m + 6m -9\)</span></p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-30" id="answer-30"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-30"><div class="answer solution-like"><p id="p-93"><span class="process-math">\((2m-3)(4m+9)\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-31" id="answer-31"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-31"><div class="answer solution-like"><p id="p-96"><span class="process-math">\((2m-3)(4m+3)\)</span></p></div></div>
 </div></article>
 </div>
 </div></section></section><section class="subsection" id="ac-method"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">2.1.3</span> <span class="title">Factoring with the AC Method</span>
 </h3>
-<section class="introduction" id="introduction-15"><p id="p-94">Some polynomials (usually a trinomial, or a binomial with highest exponent of 2 on its variable) may need a different factoring method. This method of factoring utilizes the method of grouping within it.</p></section><article class="example example-like" id="example-10"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-10"><h4 class="heading">
+<section class="introduction" id="introduction-15"><p id="p-97">Some polynomials (usually a trinomial, or a binomial with highest exponent of 2 on its variable) may need a different factoring method. This method of factoring utilizes the method of grouping within it.</p></section><article class="example example-like" id="example-10"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-10"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.1.3</span><span class="period">.</span><span class="space"> </span><span class="title">Example of the AC Method.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-10"><article class="example example-like"><p id="p-95">For example, if we want to factor the trinomial <span class="process-math">\(5x^2+7x+2\text{,}\)</span> we can see that there is not a GCF aside from <span class="process-math">\(1\)</span> or <span class="process-math">\(-1\text{,}\)</span> and there are only three terms, so we cannot get groups of two terms at a time. To get to the point where we can use the method of grouping, we need to have an even number of terms.</p>
-<ol class="decimal">
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-10"><article class="example example-like"><p id="p-98">For example, if we want to factor the trinomial <span class="process-math">\(5x^2+7x+2\text{,}\)</span> we can see that there is not a GCF aside from <span class="process-math">\(1\)</span> or <span class="process-math">\(-1\text{,}\)</span> and there are only three terms, so we cannot get groups of two terms at a time. To get to the point where we can use the method of grouping, we need to have an even number of terms.</p>
+<ol class="lower-alpha">
 <li id="li-36"><p id="p-derived-li-36">This method is called "the AC Method" because it begins by thinking of the polynomial as <span class="process-math">\(Ax^2+Bx+C\)</span> and multiplying the <span class="process-math">\(A\)</span> and <span class="process-math">\(C\)</span> together. What is <span class="process-math">\(AC\text{?}\)</span></p></li>
 <li id="li-37"><p id="p-derived-li-37">Find all possible combinations of numbers which multiply to get <span class="process-math">\(AC\)</span></p></li>
 <li id="li-38"><p id="p-derived-li-38">Choose from your list the pair which also adds to get B (or in this case, 7).</p></li>
 <li id="li-39"><p id="p-derived-li-39">Split the middle term into two represented by these numbers. The expression should be equivalent to what you were given, but should now have four terms.</p></li>
 <li id="li-40"><p id="p-derived-li-40">If everything was done well and the polynomial is factorable, you may now factor by grouping.</p></li>
 </ol></article></div>
-<p id="p-96">Note that the AC Method is also used when <span class="process-math">\(A=1\text{,}\)</span> but is streamlined by the idea of finding a pair of numbers which multiply to get <span class="process-math">\(C\)</span> and add to get <span class="process-math">\(B\text{.}\)</span></p></section><section class="exercises" id="exercises-7"><h3 class="heading hide-type">
+<p id="p-99">Note that the AC Method is also used when <span class="process-math">\(A=1\text{,}\)</span> but is streamlined by the idea of finding a pair of numbers which multiply to get <span class="process-math">\(C\)</span> and add to get <span class="process-math">\(B\text{.}\)</span></p></section><section class="exercises" id="exercises-7"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber">2.1.4</span> <span class="title">Exercises</span>
 </h3>
 <div class="exercisegroup" id="exercisegroup-8">
 <h4 class="heading"><span class="title">Exercise Group.</span></h4>
-<div class="introduction" id="introduction-16"><p id="p-97">Factor each of the following polynomial expressions, if possible.</p></div>
+<div class="introduction" id="introduction-16"><p id="p-100">Factor each of the following polynomial expressions, if possible.</p></div>
 <div class="exercisegroup-exercises">
 <article class="exercise exercise-like" id="exercise-26"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
-<p id="p-98"><span class="process-math">\(x^2 - 10x + 25\)</span></p>
+<p id="p-101"><span class="process-math">\(x^2 - 10x + 25\)</span></p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-31" id="answer-31"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-31"><div class="answer solution-like"><p id="p-99"><span class="process-math">\((x-5)(x-5)\)</span> or <span class="process-math">\((x-5)^2\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-32" id="answer-32"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-32"><div class="answer solution-like"><p id="p-102"><span class="process-math">\((x-5)(x-5)\)</span> or <span class="process-math">\((x-5)^2\)</span></p></div></div>
 </div></article><article class="exercise exercise-like" id="exercise-27"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
-<p id="p-100"><span class="process-math">\(x^2 +  9x + 20\)</span></p>
+<p id="p-103"><span class="process-math">\(x^2 +  9x + 20\)</span></p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-32" id="answer-32"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-32"><div class="answer solution-like"><p id="p-101"><span class="process-math">\((x+4)(x+5)\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-33" id="answer-33"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-33"><div class="answer solution-like"><p id="p-104"><span class="process-math">\((x+4)(x+5)\)</span></p></div></div>
 </div></article><article class="exercise exercise-like" id="exercise-28"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
-<p id="p-102"><span class="process-math">\(4a^2 + 16a + 16\)</span></p>
+<p id="p-105"><span class="process-math">\(4a^2 + 16a + 16\)</span></p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-33" id="answer-33"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-33"><div class="answer solution-like"><p id="p-103"><span class="process-math">\(4(a+2)(a+2)\)</span> or 4(a+2)^2</p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-34" id="answer-34"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-34"><div class="answer solution-like"><p id="p-106"><span class="process-math">\(4(a+2)(a+2)\)</span> or <span class="process-math">\(4(a+2)^2\)</span></p></div></div>
 </div></article><article class="exercise exercise-like" id="exercise-29"><h5 class="heading"><span class="codenumber">4<span class="period">.</span></span></h5>
-<p id="p-104"><span class="process-math">\(-2y^2 +20y -32\)</span></p>
+<p id="p-107"><span class="process-math">\(-2y^2 +20y -32\)</span></p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-34" id="answer-34"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-34"><div class="answer solution-like"><p id="p-105"><span class="process-math">\(-2(y-2)(y-8)\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-35" id="answer-35"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-35"><div class="answer solution-like"><p id="p-108"><span class="process-math">\(-2(y-2)(y-8)\)</span></p></div></div>
 </div></article><article class="exercise exercise-like" id="exercise-30"><h5 class="heading"><span class="codenumber">5<span class="period">.</span></span></h5>
-<p id="p-106"><span class="process-math">\(3x^2 - 8x+4\)</span></p>
+<p id="p-109"><span class="process-math">\(3x^2 - 8x+4\)</span></p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-35" id="answer-35"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-35"><div class="answer solution-like"><p id="p-107"><span class="process-math">\((3x-2)(x+2)\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-36" id="answer-36"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-36"><div class="answer solution-like"><p id="p-110"><span class="process-math">\((3x-2)(x-2)\)</span></p></div></div>
 </div></article><article class="exercise exercise-like" id="exercise-31"><h5 class="heading"><span class="codenumber">6<span class="period">.</span></span></h5>
-<p id="p-108"><span class="process-math">\(3x^2+4x-4\)</span></p>
+<p id="p-111"><span class="process-math">\(3x^2+4x-4\)</span></p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-36" id="answer-36"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-36"><div class="answer solution-like"><p id="p-109"><span class="process-math">\((3x-2)(x+2)\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-37" id="answer-37"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-37"><div class="answer solution-like"><p id="p-112"><span class="process-math">\((3x-2)(x+2)\)</span></p></div></div>
 </div></article><article class="exercise exercise-like" id="exercise-32"><h5 class="heading"><span class="codenumber">7<span class="period">.</span></span></h5>
-<p id="p-110"><span class="process-math">\(6x^3 + x^2 - 2x\)</span></p>
+<p id="p-113"><span class="process-math">\(6x^3 + x^2 - 2x\)</span></p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-37" id="answer-37"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-37"><div class="answer solution-like"><p id="p-111"><span class="process-math">\(x(3x+2)(2x-1)\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-38" id="answer-38"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-38"><div class="answer solution-like"><p id="p-114"><span class="process-math">\(x(3x+2)(2x-1)\)</span></p></div></div>
 </div></article><article class="exercise exercise-like" id="exercise-33"><h5 class="heading"><span class="codenumber">8<span class="period">.</span></span></h5>
-<p id="p-112"><span class="process-math">\(18x^2y - 12xy - 30y\)</span></p>
+<p id="p-115"><span class="process-math">\(18x^2y - 12xy - 30y\)</span></p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-38" id="answer-38"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-38"><div class="answer solution-like"><p id="p-113"><span class="process-math">\(6y(x+1)(3x-5)\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-39" id="answer-39"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-39"><div class="answer solution-like"><p id="p-116"><span class="process-math">\(6y(x+1)(3x-5)\)</span></p></div></div>
 </div></article>
 </div>
 </div></section></section></div></main>

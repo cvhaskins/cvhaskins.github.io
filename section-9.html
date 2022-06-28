@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-06-20T13:40:14Z       *-->
+<!--*       on 2022-06-28T15:38:34Z       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -49,7 +49,38 @@
 <link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/colors_blue_red.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
-<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+<!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX Course: Title Here';
+eBookConfig.basecourse = 'PTX Base Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.acDefaultLanguage = 'python';
+eBookConfig.runestone_version = '5.0.1';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.2.1/runtime.b0f8547c48f16a9f.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.2.1/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.2.1/runestone.0e9550fe42760516.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.2.1/637.fafafbd97df8a0d1.css">
+<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.2.1/runestone.e4d5592da655219f.css">
 </head>
 <body class="pretext-book ignore-math has-toc has-sidebar-left">
 <a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
@@ -59,6 +90,8 @@
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
 <a id="logo-link" href=""></a><div class="title-container">
@@ -162,7 +195,7 @@
 </h2>
 <article class="example example-like" id="example-15"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-15"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">4.2.1</span><span class="period">.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-15"><article class="example example-like"><p id="p-135">You are given the following list of facts about a situation which can be modeled by a function.</p>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-15"><article class="example example-like"><p id="p-138">You are given the following list of facts about a situation which can be modeled by a function.</p>
 <ul class="disc">
 <li id="li-41"><p id="p-derived-li-41">We are measuring the number of bacteria in a culture, measuring time in minutes as the input.</p></li>
 <li id="li-42"><p id="p-derived-li-42">At 5 minutes, we measure there to be 40 bacteria in the culture.</p></li>
@@ -178,26 +211,26 @@
 </h3>
 <div class="exercisegroup" id="exercisegroup-14">
 <h4 class="heading"><span class="title">Exercise Group.</span></h4>
-<div class="introduction" id="introduction-27"><p id="p-136">For each of the descriptions below, create a graph for a function which satisfies each component of the description.</p></div>
+<div class="introduction" id="introduction-27"><p id="p-139">For each of the descriptions below, create a graph for a function which satisfies each component of the description.</p></div>
 <div class="exercisegroup-exercises">
 <article class="exercise exercise-like" id="exercise-44"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
-<p id="p-137">The amount of time it takes me to write an essay is two hours for the introduction and conclusion and 30 minutes per page of the middle sections.</p></article><article class="exercise exercise-like" id="exercise-45"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
-<p id="p-138">We are keeping track of the height of the ball after being thrown. It reaches a maximum height of 12 feet, then lands on the ground at 6 seconds, 9 seconds, 11 seconds, and 12 seconds.</p></article><article class="exercise exercise-like" id="exercise-46"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
-<p id="p-139">You want to keep track of good deeds, starting with yourself. You do good deeds for two people you know and ask them to do the same. Assuming all people do their two good deeds, the input is measured in how far down the line the favors are "paid forward", while the output is measured in number of good deeds done.</p></article>
+<p id="p-140">The amount of time it takes me to write an essay is two hours total for the introduction and conclusion and 30 minutes per page of the middle sections.</p></article><article class="exercise exercise-like" id="exercise-45"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
+<p id="p-141">We are keeping track of the height of the ball after being thrown. It reaches a maximum height of 12 feet, then lands on the ground at 6 seconds, 9 seconds, 11 seconds, and 12 seconds.</p></article><article class="exercise exercise-like" id="exercise-46"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
+<p id="p-142">You want to keep track of good deeds, starting with yourself. You do good deeds for two people you know and ask them to do the same. Assuming all people do their two good deeds, the input is measured in how far down the line the favors are "paid forward", while the output is measured in number of good deeds done.</p></article>
 </div>
-</div></section><article class="example example-like" id="example-16"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-16"><h3 class="heading">
+</div></section><article class="example example-like" id="example-16"><a href="" data-knowl="" class="id-ref example-knowl original has-image" data-refid="hk-example-16"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">4.2.2</span><span class="period">.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-16"><article class="example example-like"><p id="p-140">In this example, you will use the following coordinate plane: <div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/ipadrev1.svg" role="img" class="contained" alt="A coordinate plane, graphing a cubic polynomial with a y-intercept of 10, growing to an output of 30 at an input of 3, decreasing to an output of about 17 at an input of about 8.3, and increasing afterwards. The graph stops at an input of about 11 with an output of about 32."></div> Suppose that the graph above represents the amount of revenue, in billions of dollars, of iPads where the input is years since 2010. Your challenge is to give a description, in words, of this graph with enough detail that someone else could either redraw the graph accurately from your description or answer follow-up questions about iPad revenue.</p></article></div>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-16"><article class="example example-like"><p id="p-143">In this example, you will use the following coordinate plane: <div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/ipadrev1.svg" role="img" class="contained" alt="A coordinate plane, graphing a cubic polynomial with a y-intercept of 10, growing to an output of 30 at an input of 3, decreasing to an output of about 17 at an input of about 8.3, and increasing afterwards. The graph stops at an input of about 11 with an output of about 32."></div> Suppose that the graph above represents the amount of revenue, in billions of dollars, of iPads where the input is years since 2010. Your challenge is to give a description, in words, of this graph with enough detail that someone else could either redraw the graph accurately from your description or answer follow-up questions about iPad revenue.</p></article></div>
 <section class="exercises" id="exercises-13"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
 </h3>
 <div class="exercisegroup" id="exercisegroup-15">
 <h4 class="heading"><span class="title">Exercise Group.</span></h4>
-<div class="introduction" id="introduction-28"><p id="p-141">Give a description of each of these graphs with enough detail that someone else could either redraw the graph accurately from your description or answer follow-up questions about the scenario. You are also provided with inputs and outputs.</p></div>
+<div class="introduction" id="introduction-28"><p id="p-144">Give a description of each of these graphs with enough detail that someone else could either redraw the graph accurately from your description or answer follow-up questions about the scenario. You are also provided with inputs and outputs.</p></div>
 <div class="exercisegroup-exercises">
 <article class="exercise exercise-like" id="exercise-47"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
-<p id="p-142"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/car-cost.svg" role="img" class="contained" alt="A coordinate plane, graphing a linear function with x- and y-intercept of 0, growing to an output of 10,000 at an input of 100,000."></div> The graph represents the amount of money you should spend on a car based on the amount of annual income you have.</p></article><article class="exercise exercise-like" id="exercise-48"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
-<p id="p-143"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/tornados.svg" role="img" class="contained" alt="A coordinate plane, graphing a polynomial function with y-intercept at about 50, growing to a local minimum of about 58 at an input of about 7, decreasing to a local minimum of about 48 at an input of about 29, then slowly increasing to an output of about 80 at an input of 70."></div> The graph represents a model of the number of tornados in Oklahoma during each year for inputs representing years since 1950.</p></article>
+<p id="p-145"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/car-cost.svg" role="img" class="contained" alt="A coordinate plane, graphing a linear function with x- and y-intercept of 0, growing to an output of 10,000 at an input of 100,000."></div> The graph represents the amount of money you should spend on a car based on the amount of annual income you have.</p></article><article class="exercise exercise-like" id="exercise-48"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
+<p id="p-146"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/tornados.svg" role="img" class="contained" alt="A coordinate plane, graphing a polynomial function with y-intercept at about 50, growing to a local minimum of about 58 at an input of about 7, decreasing to a local minimum of about 48 at an input of about 29, then slowly increasing to an output of about 80 at an input of 70."></div> The graph represents a model of the number of tornados in Oklahoma during each year for inputs representing years since 1950.</p></article>
 </div>
 </div></section></section></div></main>
 </div>

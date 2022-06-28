@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-06-20T13:40:14Z       *-->
+<!--*       on 2022-06-28T15:38:34Z       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -49,7 +49,38 @@
 <link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/colors_blue_red.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
-<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+<!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX Course: Title Here';
+eBookConfig.basecourse = 'PTX Base Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.acDefaultLanguage = 'python';
+eBookConfig.runestone_version = '5.0.1';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.2.1/runtime.b0f8547c48f16a9f.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.2.1/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.2.1/runestone.0e9550fe42760516.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.2.1/637.fafafbd97df8a0d1.css">
+<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.2.1/runestone.e4d5592da655219f.css">
 </head>
 <body class="pretext-book ignore-math has-toc has-sidebar-left">
 <a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
@@ -59,6 +90,8 @@
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
 <a id="logo-link" href=""></a><div class="title-container">
@@ -160,40 +193,40 @@
 <main class="main"><div id="content" class="pretext-content"><section class="chapter" id="ch-five"><h2 class="heading">
 <span class="type">Chapter</span> <span class="codenumber">5</span> <span class="title">Converting Algebraic Forms</span>
 </h2>
-<section class="introduction" id="introduction-29"><p id="p-144">So far, we've practiced converting algebraic forms of mathematical information into and out of numerical and verbal forms. We'll now focus on graphical forms. You may choose to use graphical transformations of library functions or first converting to a numerical form, as needed.</p></section><article class="example example-like" id="example-17"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-17"><h2 class="heading">
+<section class="introduction" id="introduction-29"><p id="p-147">So far, we've practiced converting algebraic forms of mathematical information into and out of numerical and verbal forms. We'll now focus on graphical forms. You may choose to use graphical transformations of library functions or first converting to a numerical form, as needed.</p></section><article class="example example-like" id="example-17"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-17"><h2 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">5.0.1</span><span class="period">.</span>
-</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-17"><article class="example example-like"><p id="p-145">Consider the algebraic form:</p>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-17"><article class="example example-like"><p id="p-148">Consider the algebraic form:</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 f(x) = \dfrac{\sqrt{3x-4}}{x+5}
 \end{equation*}
 </div>
 <p class="continuation">Sketch a graph of <span class="process-math">\(y_1=\sqrt{3x-4}\)</span> and another graph of <span class="process-math">\(y_2=x+5\text{.}\)</span> How might each output of <span class="process-math">\(y_1\)</span> change by getting divided by each output of <span class="process-math">\(y_2\text{?}\)</span></p>
-<p id="p-146">Now convert <span class="process-math">\(f(x)\)</span> into numerical form and plot the points on a graph. Does the image make sense based on what you see of <span class="process-math">\(y_1\)</span> and <span class="process-math">\(y_2\text{?}\)</span></p></article></div>
+<p id="p-149">Now convert <span class="process-math">\(f(x)\)</span> into numerical form and plot the points on a graph. Does the image make sense based on what you see of <span class="process-math">\(y_1\)</span> and <span class="process-math">\(y_2\text{?}\)</span></p></article></div>
 <section class="exercises" id="exercises-14"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
 </h3>
 <div class="exercisegroup" id="exercisegroup-16">
 <h3 class="heading"><span class="title">Exercise Group.</span></h3>
-<div class="introduction" id="introduction-30"><p id="p-147">For each of the following algebraic forms for functions below, sketch a graph of the function.</p></div>
+<div class="introduction" id="introduction-30"><p id="p-150">For each of the following algebraic forms for functions below, sketch a graph of the function.</p></div>
 <div class="exercisegroup-exercises">
 <article class="exercise exercise-like" id="exercise-49"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<p id="p-148"><span class="process-math">\(g(t) = -3(t-8)^2+6\)</span></p></article><article class="exercise exercise-like" id="exercise-50"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<p id="p-149"><span class="process-math">\(h(r) = \sqrt{r^2-8}+5\)</span></p></article>
+<p id="p-151"><span class="process-math">\(g(t) = -3(t-8)^2+6\)</span></p></article><article class="exercise exercise-like" id="exercise-50"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<p id="p-152"><span class="process-math">\(h(r) = \sqrt{r^2-8}+5\)</span></p></article>
 </div>
-</div></section><article class="example example-like" id="example-18"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-18"><h2 class="heading">
+</div></section><article class="example example-like" id="example-18"><a href="" data-knowl="" class="id-ref example-knowl original has-image" data-refid="hk-example-18"><h2 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">5.0.2</span><span class="period">.</span>
-</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-18"><article class="example example-like"><p id="p-150">Consider the graph below: <div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/graph-to-alg.svg" role="img" class="contained" alt='A cubic function with the "twist" at the point (5, -2) and other points at (6,1) and (4,-1).'></div> This looks like a function that is not in our Library of Functions, but is very common. It looks almost like <span class="process-math">\(y=x^3\text{,}\)</span> but graphically transformed. How can you use this to create an algebraic form for the graphed function? Do so.</p></article></div>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-18"><article class="example example-like"><p id="p-153">Consider the graph below: <div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/graph-to-alg.svg" role="img" class="contained" alt='A cubic function with the "twist" at the point (5, -2) and other points at (6,1) and (4,-1).'></div> This looks like a function that is not in our Library of Functions, but is very common. It looks almost like <span class="process-math">\(y=x^3\text{,}\)</span> but graphically transformed. How can you use this to create an algebraic form for the graphed function? Do so.</p></article></div>
 <section class="exercises" id="exercises-15"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
 </h3>
 <div class="exercisegroup" id="exercisegroup-17">
 <h3 class="heading"><span class="title">Exercise Group.</span></h3>
-<div class="introduction" id="introduction-31"><p id="p-151">For each of the graphed functions below, convert them to algebraic form.</p></div>
+<div class="introduction" id="introduction-31"><p id="p-154">For each of the graphed functions below, convert them to algebraic form.</p></div>
 <div class="exercisegroup-exercises">
 <article class="exercise exercise-like" id="exercise-51"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<p id="p-152"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/sqrt.svg" role="img" class="contained" alt='A square root function with "origin" at the point (3,1), x-intercept at the point (2,0), and another point at (-1,-1).'></div></p></article><article class="exercise exercise-like" id="exercise-52"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<p id="p-153"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/squared.svg" role="img" class="contained" alt="A squared function with vertex at the point (0,-2) and another point at (1,3)."></div></p></article>
+<p id="p-155"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/sqrt.svg" role="img" class="contained" alt='A square root function with "origin" at the point (3,1), x-intercept at the point (2,0), and another point at (-1,-1).'></div></p></article><article class="exercise exercise-like" id="exercise-52"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<p id="p-156"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/squared.svg" role="img" class="contained" alt="A squared function with vertex at the point (0,-2) and another point at (1,3)."></div></p></article>
 </div>
 </div></section></section></div></main>
 </div>
