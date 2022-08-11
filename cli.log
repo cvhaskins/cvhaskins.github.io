@@ -1,0 +1,16 @@
+INFO    :  PreTeXt project found in `/home/user/1501-workbook`.
+WARNING :  Using CLI version 0.8.1 but project's `requirements.txt`
+WARNING :  is configured to use 0.6.3. Consider either installing
+WARNING :  CLI version 0.6.3 or changing `requirements.txt` to match 0.8.1.
+INFO    :  
+INFO    :  Now preparing local server to preview directory `/home/user/1501-workbook/output/html`.
+INFO    :    (Reminder: use `pretext deploy` to deploy your built project to a public
+INFO    :    GitHub Pages site that can be shared with readers who cannot access your
+INFO    :    personal computer.)
+INFO    :  
+INFO    :  Success! Open the below url in a web browser to preview the most recent build of your project.
+INFO    :      https://cocalc.com/0bfa1a4f-3de6-44af-a4bd-11bb44a9ec59/server/8000/
+INFO    :  Use [Ctrl]+[C] to halt the server.
+
+INFO    :  
+Closing server...
